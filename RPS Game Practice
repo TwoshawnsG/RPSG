@@ -1,0 +1,64 @@
+import random
+import time
+def main():
+    print("This is a rock, paper, scissor game")
+    
+    while answer.upper == 'Y':
+        return True
+    return False
+play_again = True
+move_list = {'Rock', 'Paper', 'Scissors'}
+
+def rps():
+    print("This is a rock, paper, scissor game")
+    time.sleep(3)
+    move_list = ['Rock', 'Paper', 'Scissors']
+    while play_again == True:
+        for comp in move_list.keys():
+            user = input('What\'s your hand?: ')
+            user = user.capitalize()
+            comp = random.choice(list(move_list.keys()))
+            if comp == 'Rock' and user == 'Paper':
+                print("Computer throws " + comp + " you have thrown " + user + "!")
+                print("You Win!")
+
+            elif comp == 'Rock' and user == 'Rock':
+                print("Computer throws " + comp + " you have thrown " + user + "!")
+                print("It's a draw")
+            
+            elif comp == 'Rock' and user == 'Scissor':
+                print("Computer throws " + comp + " you have thrown " + user + "!")
+                print("You Lose!")
+
+            elif comp == 'Scissor' and user == 'Paper':
+                print("Computer throws " + comp + " you have thrown " + user + "!")
+                print("You Lose!")
+
+            elif comp == 'Scissor' and user == 'Rock':
+                print("Computer throws " + comp + " you have thrown " + user + "!")
+                print("You Lose!")
+
+            elif comp == 'Scissor' and user == 'Scissor':
+                print("Computer throws " + comp + " you have thrown " + user + "!")
+                print("It's a Draw!")
+
+            elif comp == 'Paper' and user == 'Paper':
+                print("Computer throws " + comp + " you have thrown " + user + "!")
+                print("It's a Draw!")
+
+            elif comp == 'Paper' and user == 'Rock':
+                print("Computer throws " + comp + " you have thrown " + user + "!")
+                print("You Lose!")
+
+            elif comp == 'Paper' and user == 'Scissor':
+                print("Computer throws " + comp + " you have thrown " + user + "!")
+                print("You Win!")
+            else:
+                print("You messed up the program dummy")
+
+        
+    answer = input("Would you like to play again?: ")
+
+rps()
+main()
+
